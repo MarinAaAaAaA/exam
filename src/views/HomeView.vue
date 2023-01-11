@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-    <input v-model="searchCat" type="text" placeholder="Выбор преподавателей">
+    <input class="home__more" v-model="searchCat" type="text" placeholder="Поиск вакансии">
     <ul class="cat_meow">
-      <li v-for="(cat, index) in filteredCat" :key="index">{{ cat }}</li>
+      <li v-for="(cat, index) in filteredCat" :key="index" @click="$router.push(`/${cat1.indexOf(cat)+1}`)">{{ cat }}</li>
     </ul>
     <proftabicaView
     :users_data="USERS"/>
@@ -20,7 +20,8 @@ export default {
     return {
       title: '211-323',
       searchCat:'',
-      cat: ['Наталья Владимировна','Ирина Николаевна','Алина Зигмудовна','Фильза Муннировна']
+      cat: ['Инженер','Администратор','Бухгалтер','Редактор журнала','Маркетолог'],
+      cat1: ['Инженер','Администратор','Бухгалтер','Редактор журнала','Маркетолог']
 
   }
 },
@@ -54,4 +55,8 @@ computed: {...mapGetters([
 .home{
   padding-top: 150px;
 }
+.home__more{
+  border:2px solid yellow;
+}
+
 </style>

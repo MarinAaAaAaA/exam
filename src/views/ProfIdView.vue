@@ -1,6 +1,6 @@
 <template>
     <div class="proff">
-        <div >
+        <div class="work">
             Вакансия:
         {{article.profession}}
         </div>
@@ -16,6 +16,12 @@
             Заработная плата:
         {{article.price}}
         </div>
+        <div class="more__price">
+            Комментарии о компании:
+        {{article.reviews}}
+        </div>
+
+        
     </div>
    
     
@@ -48,8 +54,14 @@ computed: {...mapGetters([
 .proff{
     padding-top: 100px;
     text-align:left;
+    font-size: 2px;
+    width: 900px;
+}
+.work{
+    text-decoration: underline yellow;
     font-size: 30px;
 }
+
 .catalog-item__image{
     width: 500px;
     margin-top: 50px;
