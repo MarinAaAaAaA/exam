@@ -20,7 +20,7 @@
             <router-link class="button" to="/auth">Вход</router-link>
             <router-link class="button" to="/registration">Регистрация</router-link>
         </div>
-        <li class="nav-link"><a href="https://github.com/MarinAaAaAaA/exam/blob/main/public/db.json">Json</a></li>
+        <li class="nav-link"><a href="https://github.com/MarinAaAaAaA/exam/blob/main/public/main.json">Json</a></li>
         <li class="nav-link"><a href="https://github.com/MarinAaAaAaA/exam">Репозиторий</a></li>
 
 
