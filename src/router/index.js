@@ -2,8 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
-import ProgramsView from '../views/ProgramsView.vue'
-import ClassesView from '../views/ClassesView.vue'
+import AuthView from '../views/AuthView.vue'
+import RegistrationView from '../views/RegistrationView.vue'
 import ProfIdView from '../views/ProfIdView.vue'
 
 Vue.use(VueRouter)
@@ -20,14 +20,14 @@ const routes = [
     component: AboutView
   },
   {
-    path: '/programs',
-    name: 'programs',
-    component: ProgramsView
+    path: '/auth',
+    name: 'auth',
+    component: AuthView
   },
   {
-    path: '/classes',
-    name: 'classes',
-    component: ClassesView
+    path: '/registration',
+    name: 'registration',
+    component: RegistrationView
   },
   {
     path: '/:id',

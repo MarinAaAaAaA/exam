@@ -16,11 +16,9 @@
     <ul class="nav-items">
         <li class="nav-link"> <router-link to="/">Главная</router-link></li>
         <li class="nav-link"><router-link to="/about">О нас</router-link></li>
-        <li class="nav-link"><router-link to="/programs">Программы</router-link></li>
-        <li class="nav-link"><router-link to="/classes">Мастер-классы</router-link></li>
         <div class="login-register">
-            <a href="#" class="button">Вход</a>
-            <a href="#" class="button">Регистрация</a>
+            <router-link class="button" to="/auth">Вход</router-link>
+            <router-link class="button" to="/registration">Регистрация</router-link>
         </div>
     </ul>
   </header>
@@ -86,48 +84,37 @@ a {
 .navbar-container .nav-items {
     display: flex;
     list-style-type: none;
-    gap: 3rem;
+    gap: 1rem;
     align-items: center;
 }
 
 .navbar-container .nav-items .nav-link a {
     color: #fff;
     transition: 0.2s;
-    -webkit-transition: 0.2s;
-    -moz-transition: 0.2s;
-    -ms-transition: 0.2s;
-    -o-transition: 0.2s;
     padding: 10px;
     text-transform: uppercase;
 }
+
 
 .navbar-container .nav-items .nav-link:after {
     display: block;
     content: "";
     border-top: 2px solid rgb(254, 239, 73);
     transform: scaleX(0);
-    -webkit-transform: scaleX(0);
-    -moz-transform: scaleX(0);
-    -ms-transform: scaleX(0);
-    -o-transform: scaleX(0);
     transition: transform 250ms ease-in-out;
-    -webkit-transition: transform 250ms ease-in-out;
-    -moz-transition: transform 250ms ease-in-out;
-    -ms-transition: transform 250ms ease-in-out;
-    -o-transition: transform 250ms ease-in-out;
 }
 
 .navbar-container .nav-items .nav-link:hover:after {
     transform: scaleX(1);
-    -webkit-transform: scaleX(1);
-    -moz-transform: scaleX(1);
-    -ms-transform: scaleX(1);
-    -o-transform: scaleX(1);
+    
 } 
+.button{
+    
+}
 
 .navbar-container .nav-items .nav-link a:hover {
     filter: brightness(80%);
-    -webkit-filter: brightness(80%);
+    
 }
 
 .navbar-container .nav-items .login-register {
@@ -141,16 +128,8 @@ a {
     border: 2px solid rgb(254, 239, 73);
     padding: 5px 20px;
     border-radius:3px ;
-    -webkit-border-radius:3px ;
-    -moz-border-radius:3px ;
-    -ms-border-radius:3px ;
-    -o-border-radius:3px;
     text-transform: uppercase;
     transition: all ease-in 0.3s;
-    -webkit-transition: all ease-in 0.3s;
-    -moz-transition: all ease-in 0.3s;
-    -ms-transition: all ease-in 0.3s;
-    -o-transition: all ease-in 0.3s;
 }
 
 .navbar-container .nav-items .login-register .button:hover {
@@ -190,7 +169,7 @@ a {
 
 /* adjustment for mobile phones */
 
-@media(max-width: 800px) {
+@media(max-width: 1000px) {
     .navbar-container .nav-items {
         flex-direction: column;
         position: fixed;
@@ -202,10 +181,6 @@ a {
         z-index: 99;
         right: -100%; 
         transition: 0.2s ease-in;
-        -webkit-transition: 0.2s ease-in;
-        -moz-transition: 0.2s ease-in;
-        -ms-transition: 0.2s ease-in;
-        -o-transition: 0.2s ease-in;
 }
 
 .bars {
