@@ -10,7 +10,7 @@ export default new Vuex.Store({
   },
   actions: {
     GET_USERS_FROM_API({commit}){
-      return axios('./db.json',{
+      return axios('./main.json',{
         method: 'GET'
       })
       .then((response ) => {
